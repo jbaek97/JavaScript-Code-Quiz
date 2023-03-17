@@ -283,3 +283,30 @@ function question7() {
         answers.children[i].children[0].addEventListener('click', correctCheck1);
     };
 };
+
+//Enter Score and Save to Local Storage
+var showHighScoreButton = document.querySelector('.showHighScore');
+var highScoresAppear = document.querySelector("#highScores");
+
+function entry() {
+    var entry = {
+        Initials: initialsEntry.value,
+        Score: points,
+    };
+    localStorage.setItem("Entry", JSON.stringify(entry));
+};
+
+function getEntry() {
+    var pastScore = JSON.parse(localStorage.getItem("Entry"));
+    listItem.innerHTML += `<li class="item">${pastScore.Initials}: ${pastScore.Score}</li>`;
+};
+
+
+function enterInitials(event){
+    event.preventDefault();
+    result.remove();
+    entry();
+    getEntry();
+    question.innerHTML = "High Scores:"
+    highScoresAppear.className = "highScores";
+};
