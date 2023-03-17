@@ -310,3 +310,30 @@ function enterInitials(event){
     question.innerHTML = "High Scores:"
     highScoresAppear.className = "highScores";
 };
+
+// High Scores
+var listItem = document.querySelector(".scoresList");
+
+
+function showHighScore() {
+    startButton.remove();
+    welcomeParagraph.remove();
+    highScoresAppear.className = "highScores";
+    intro.innerHTML ="High Scores";
+    result.className = "resultInitial";
+    // getEntry();
+};
+
+//Go Back
+var goBack = document.querySelector('#goBack');
+var goBack2 = document.querySelector('#goBack2');
+
+function home() {
+   location.reload();
+};
+
+goBack.addEventListener('click', home);
+goBack2.addEventListener('click', home);
+showHighScoreButton.addEventListener('click', showHighScore);
+submitButton.addEventListener('click', enterInitials);
+startButton.addEventListener('click', start);
