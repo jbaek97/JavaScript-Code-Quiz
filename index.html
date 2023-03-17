@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <header>
+        <h1>Coding Quiz</h1>
+        <div class = "timer"><span class="time">Time:</span></div>
+        <button class = "showHighScore">View High Scores</button>
+    </header>
+    <section class="quiz"> 
+        <h2 class="intro">Code Quiz Challenge</h2>
+        <p class="p">Welcome to the code quize challenge. In this quiz you'll be tested on your JavaScript skills. When you're ready press the start button below to begin the quiz. When you press start the timer on the right will begin to count down from 60 seconds. The quiz will end once the timer reaches 0 or if you answer all the questions before the timer ends. For each question you get right, you will earn one point. On the otherhand, if you get a question incorrect, a second will be deducted from the timer. At the end your score will be presented with an option to enter your initials in order to record your score. If you want to view the high scores click the button on the left. Good Luck! </p>
+        <button id="start">start</button>
+        <ul id="answers"></ul>
+        <h3 class="question"></h3>
+    </section>
+    <section id = "result" class="resultInitial">
+        <h3 class="gameFinished" >Game Over</h3>
+        <h4> Your Score is <span class="score"></span></h4>
+        <form id="enter">
+            <label>Enter Initials:</label>
+            <input id="initials" type="text" value="">
+            <input id="submitBtn" type="button" value="Save">
+        </form>
+        <button id="goBack">Back</button>
+    </section>
+    <section id="highScores" class="highScoresHidden">
+        <ul class="scoresList"></ul>
+        <button id="goBack2">Back</button>
+    </section>
+    <script type ="text/javascript" src="./assets/script.js"></script>
+</body>
+</html>
