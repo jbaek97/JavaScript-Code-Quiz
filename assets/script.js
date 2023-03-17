@@ -17,3 +17,53 @@ var score = document.querySelector('.score');
 var submitButton = document.querySelector('#submitBtn');
 var initialsEntry = document.querySelector("#initials");
 var welcomeParagraph = document.querySelector(".p")
+
+//Clear Functions
+
+function clear() {
+    return intro.innerHTML = "";
+};
+
+function clearAnswers() {
+    return answers.innerHTML = "";
+};
+
+function insertQuestions(x) {
+    return intro.innerHTML = questions[x];
+};
+
+//Points 
+
+var points = 0;
+
+//Start Function
+
+function start() {
+    startButton.remove();
+    welcomeParagraph.remove();
+    intro.innerHTML = "";
+    insertQuestions(0);
+    question1();
+    timer();
+};
+
+
+//TIMER
+var time = 30;
+var count = document.querySelector(".time");
+function timer() {
+    setInterval(function () {
+        if( time > 1) {
+            time--;
+            count.innerHTML = `Time: ${time}`;
+        } else if ( time === 1) {
+            count.innerHTML = "Time: 0";
+            answers.innerHTML ="";
+            intro.innerHTML ="";
+            question.innerHTML = "";
+            result.className = "result";
+            score.textContent = points;
+            clearInterval(timer);
+        }
+    }, 1000)
+}
