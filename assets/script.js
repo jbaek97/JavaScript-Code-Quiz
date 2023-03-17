@@ -67,3 +67,219 @@ function timer() {
         }
     }, 1000)
 }
+
+//QUESTIONS
+
+//Question 1
+function question1() {
+    for(i=0; i< a1.length; i++) {
+        answers.innerHTML += `<li><button class="answersButton1" id="Btn">${a1[i]}</button></li>`;
+        };
+    function correctCheck1(event) {
+        var correctChoice = answers.children[1].children[0];
+        if(event.target === correctChoice) {
+            points++;
+            console.log(points);
+            clearAnswers();
+            clear();
+            question.innerHTML = "Correct!";
+            insertQuestions(1);
+            question2();
+        } else {
+            time--;
+            clearAnswers();
+            clear();
+            question.innerHTML = "Incorrect!";
+            insertQuestions(1);
+            question2();
+        };
+    };
+    for(i=0; i< 4; i++) {
+        answers.children[i].children[0].addEventListener('click', correctCheck1);
+    };
+};
+
+//Question 2
+function question2() {
+    for(i=0; i< a2.length; i++) {
+        answers.innerHTML += `<li><button class="answersButton1" id="Btn">${a2[i]}</button></li>`;
+        };
+    function correctCheck1(event) {
+        var correctChoice = answers.children[3].children[0];
+        if(event.target === correctChoice) {
+            points++;
+            console.log(points);
+            clearAnswers();
+            clear();
+            question.innerHTML = "Correct!";
+            insertQuestions(2);
+            question3();
+        } else {
+            time--;
+            clearAnswers();
+            clear();
+            question.innerHTML = "Incorrect!";
+            insertQuestions(2);
+            question3();
+        };
+    };
+    for(i=0; i< 4; i++) {
+        answers.children[i].children[0].addEventListener('click', correctCheck1);
+    };
+};
+
+//Question 3
+function question3() {
+    for(i=0; i< a3.length; i++) {
+        answers.innerHTML += `<li><button class="answersButton1" id="Btn">${a3[i]}</button></li>`;
+        };
+    function correctCheck1(event) {
+        var correctChoice = answers.children[2].children[0];
+        if(event.target === correctChoice) {
+            points++;
+            console.log(points);
+            clearAnswers();
+            clear();
+            question.innerHTML = "Correct!";
+            insertQuestions(3);
+            question4();
+        } else {
+            time--;
+            clearAnswers();
+            clear();
+            question.innerHTML = "Incorrect!";
+            insertQuestions(3);
+            question4();
+        };
+    };
+    for(i=0; i< 4; i++) {
+        answers.children[i].children[0].addEventListener('click', correctCheck1);
+    };
+};
+
+//Question 4
+function question4() {
+    for(i=0; i< a4.length; i++) {
+        answers.innerHTML += `<li><button class="answersButton1" id="Btn">${a4[i]}</button></li>`;
+        };
+    function correctCheck1(event) {
+        var correctChoice = answers.children[0].children[0];
+        if(event.target === correctChoice) {
+            points++;
+            console.log(points);
+            clearAnswers();
+            clear();
+            question.innerHTML = "Correct!";
+            insertQuestions(4);
+            question5();
+        } else {
+            time--;
+            clearAnswers();
+            clear();
+            question.innerHTML = "Incorrect!";
+            insertQuestions(4);
+            question5();
+        };
+    };
+    for(i=0; i< 4; i++) {
+        answers.children[i].children[0].addEventListener('click', correctCheck1);
+    };
+};
+
+//Question 5
+function question5() {
+    for(i=0; i< a5.length; i++) {
+        answers.innerHTML += `<li><button class="answersButton1" id="Btn">${a5[i]}</button></li>`;
+        };
+    function correctCheck1(event) {
+        var correctChoice = answers.children[0].children[0];
+        if(event.target === correctChoice) {
+            points++;
+            console.log(points);
+            clearAnswers();
+            clear();
+            question.innerHTML = "Correct!";
+            insertQuestions(5);
+            question6();
+        } else {
+            time--;
+            clearAnswers();
+            clear();
+            question.innerHTML = "Incorrect!";
+            insertQuestions(5);
+            question6();
+        };
+    };
+    for(i=0; i< 4; i++) {
+        answers.children[i].children[0].addEventListener('click', correctCheck1);
+    };
+};
+
+//Question 6
+function question6() {
+    for(i=0; i< a6.length; i++) {
+        answers.innerHTML += `<li><button class="answersButton1" id="Btn">${a6[i]}</button></li>`;
+        };
+    function correctCheck1(event) {
+        var correctChoice = answers.children[1].children[0];
+        if(event.target === correctChoice) {
+            points++;
+            console.log(points);
+            clearAnswers();
+            clear();
+            question.innerHTML = "Correct!";
+            insertQuestions(6);
+            question7();
+        } else {
+            time--;
+            clearAnswers();
+            clear();
+            question.innerHTML = "Incorrect!";
+            insertQuestions(6);
+            question7();
+        };
+    };
+    for(i=0; i< 4; i++) {
+        answers.children[i].children[0].addEventListener('click', correctCheck1);
+    };
+};
+
+//Question 7
+function question7() {
+    for(i=0; i< a6.length; i++) {
+        answers.innerHTML += `<li><button class="answersButton1" id="Btn">${a7[i]}</button></li>`;
+        };
+    function correctCheck1(event) {
+        var correctChoice = answers.children[1].children[0];
+        if(event.target === correctChoice) {
+            points++;
+            console.log(points);
+            clearAnswers();
+            clear();
+            count.innerHTML = "Time: 0";
+            answers.innerHTML ="";
+            intro.innerHTML ="";
+            question.innerHTML = "";
+            result.className = "result";
+            score.textContent = points;
+            time = 0;
+            clearInterval(timer);
+        } else {
+            time--;
+            clearAnswers();
+            clear();
+            question.innerHTML = "Incorrect!";
+            count.innerHTML = "Time: 0";
+            answers.innerHTML ="";
+            intro.innerHTML ="";
+            question.innerHTML = "";
+            result.className = "result";
+            score.textContent = points;
+            time = 0;
+            clearInterval(timer);
+        };
+    };
+    for(i=0; i< 4; i++) {
+        answers.children[i].children[0].addEventListener('click', correctCheck1);
+    };
+};
